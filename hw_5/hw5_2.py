@@ -13,7 +13,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import numpy as np
 
-class Decorator_Structure:
+class Composite_Structure:
     def __init__(self, classifier_list) -> None:
         """
         Initialize a class item with a list of classificators
@@ -60,7 +60,7 @@ if __name__ == "__main__":
         RandomForestClassifier(n_estimators=10)
     ]
     
-    ensemble = Decorator_Structure(classifier_list)    
+    ensemble = Composite_Structure(classifier_list)    
     ensemble.fit(X_train, y_train)
     
     y_pred_dict = ensemble.predict(X_test)
